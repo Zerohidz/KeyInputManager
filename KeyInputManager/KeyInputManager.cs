@@ -10,6 +10,7 @@ namespace KeyInputManager
         [DllImport("user32.dll")]
         private static extern int GetAsyncKeyState(Int32 i);
 
+        
         private static Dictionary<KeyCode, int> keyCodeStates = Enum.GetValues(typeof(KeyCode)).Cast<KeyCode>().ToDictionary(k => k, k => 0);
 
         /// <summary>
